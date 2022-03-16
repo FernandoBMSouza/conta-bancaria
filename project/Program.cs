@@ -41,14 +41,14 @@ namespace Fernando
             Console.WriteLine(c1.ToString());
             
             System.Console.Write("Insira o valor a depositar: $ ");
-            double deposito = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            c1.Depositar(deposito);
+            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            c1.Depositar(quantia);
             System.Console.WriteLine("Dados da Conta Atualizados: ");
             Console.WriteLine(c1.ToString());
 
             System.Console.Write("Insira o valor do saque: $ ");
-            double saque = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            c1.Sacar(saque);
+            quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            c1.Sacar(quantia);
             System.Console.WriteLine("Dados da Conta Atualizados: ");
             Console.WriteLine(c1.ToString());
         }
