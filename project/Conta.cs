@@ -14,19 +14,19 @@ namespace Fernando
             Numero = numero;
             Nome = nome;
         }
-        public Conta(int numero, string nome, double saldo) : this(numero, nome)
+        public Conta(int numero, string nome, double depositoInicial) : this(numero, nome)
         {
-            Saldo = saldo;
+            Depositar(depositoInicial);
         }
 
-        public void Depositar(double deposito)
+        public void Depositar(double quantia)
         {
-            Saldo += deposito;
+            Saldo += quantia;
         }
 
-        public void Sacar(double saque)
+        public void Sacar(double quantia)
         {
-            Saldo -= saque + 5.00;
+            Saldo -= quantia + 5.00;
         }
 
         public override string ToString()
