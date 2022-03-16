@@ -5,10 +5,9 @@ namespace Fernando
 {
     class Conta
     {
-        private double _saldo;
-
         public int Numero { get; private set; }
         public string Nome { get; set; }
+        public double Saldo { get; private set; }
 
         public Conta(int numero, string nome)
         {
@@ -17,27 +16,22 @@ namespace Fernando
         }
         public Conta(int numero, string nome, double saldo) : this(numero, nome)
         {
-            _saldo = saldo;
-        }
-
-        public double GetSaldo()
-        {
-            return _saldo;
+            Saldo = saldo;
         }
 
         public void Depositar(double deposito)
         {
-            _saldo += deposito;
+            Saldo += deposito;
         }
 
         public void Sacar(double saque)
         {
-            _saldo -= saque + 5.00;
+            Saldo -= saque + 5.00;
         }
 
         public override string ToString()
         {
-            return $"Conta {Numero}, Titular: {Nome}, Saldo: $ {_saldo.ToString("F2", CultureInfo.InvariantCulture)}";
+            return $"Conta {Numero}, Titular: {Nome}, Saldo: $ {Saldo.ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }
